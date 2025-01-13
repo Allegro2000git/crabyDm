@@ -14,6 +14,7 @@ function App() {
       <Rating value={0}/>
       <Accordion titleValue={"Menu"} collapsed={true}/>
       <Accordion titleValue={"User"} collapsed={false}/>
+      <Rating value={0}/>
       <Rating value={1}/>
       <Rating value={2}/>
       <Rating value={3}/>
