@@ -1,37 +1,32 @@
-import React from 'react';
+
 import './App.css';
-//import {Accordion} from "./components/accordion/Accordion";
-//import { Rating } from './components/rating/Rating';
+import { Rating } from './components/rating/Rating';
 import {OnOFF} from "./components/onOFF/OnOFF";
+import {SelfContolledAccordion} from "./components/accordion/SelfControlledAccordion";
+import {UnContolledRating} from "./components/rating/SelfControlledRating";
+import {Accordion} from "./components/accordion/Accordion";
 
 type PageTitlePropsType = {
-    title: string
+    title: string;
 }
 
 function App() {
-  return (
-    <div className="App">
-        <OnOFF/>
 
-
-
-{/*   <PageTitle title={"This is APP component"}/>
-      <Rating value={0}/>
-      <Accordion titleValue={"Menu"} collapsed={true}/>
-      <Accordion titleValue={"User"} collapsed={false}/>
-      <Rating value={0}/>
-      <Rating value={1}/>
-      <Rating value={2}/>
-      <Rating value={3}/>
-      <Rating value={4}/>
-      <Rating value={5}/>*/}
-    </div>
-  );
+    return (
+        <div className="App">
+            <OnOFF/>
+            <PageTitle title={"This is APP component"}/>
+            <UnContolledRating />
+            <Rating value={5}/>
+            <SelfContolledAccordion titleValue={"Menu"}/>
+            <Accordion titleValue={"Menu"} collapsed={false}/>
+        </div>
+    );
 }
 
 
-/*function PageTitle(props: PageTitlePropsType) {
+function PageTitle(props: PageTitlePropsType) {
   return <h1>{props.title}</h1>
-}*/
+}
 
 export default App;
