@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import {Accordion} from "./components/accordion/Accordion";
-import { Rating } from './components/rating/Rating';
+//import {Accordion} from "./components/accordion/Accordion";
+//import { Rating } from './components/rating/Rating';
+import {OnOFF} from "./components/onOFF/OnOFF";
 
 type PageTitlePropsType = {
     title: string
@@ -10,7 +11,11 @@ type PageTitlePropsType = {
 function App() {
   return (
     <div className="App">
-      <PageTitle title={" This is APP component "}/>
+        <OnOFF/>
+
+
+
+{/*   <PageTitle title={"This is APP component"}/>
       <Rating value={0}/>
       <Accordion titleValue={"Menu"} collapsed={true}/>
       <Accordion titleValue={"User"} collapsed={false}/>
@@ -19,14 +24,14 @@ function App() {
       <Rating value={2}/>
       <Rating value={3}/>
       <Rating value={4}/>
-      <Rating value={5}/>
+      <Rating value={5}/>*/}
     </div>
   );
 }
 
 
-function PageTitle(props: PageTitlePropsType) {
+/*function PageTitle(props: PageTitlePropsType) {
   return <h1>{props.title}</h1>
-}
+}*/
 
 export default App;
