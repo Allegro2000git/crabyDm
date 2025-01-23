@@ -1,10 +1,12 @@
 
 import './App.css';
-import { Rating } from './components/rating/Rating';
+import {Rating, RatingValueType} from './components/rating/Rating';
 import {OnOFF} from "./components/onOFF/OnOFF";
-import {SelfContolledAccordion} from "./components/accordion/SelfControlledAccordion";
-import {UnContolledRating} from "./components/rating/SelfControlledRating";
+import {UnControlledAccordion} from "./components/accordion/SelfControlledAccordion";
+import {UnControlledRating} from "./components/rating/SelfControlledRating";
 import {Accordion} from "./components/accordion/Accordion";
+import {useState} from "react";
+import {UnControlledOnOFF} from "./components/onOFF/UnControlledOnOFF";
 
 type PageTitlePropsType = {
     title: string;
@@ -12,14 +14,22 @@ type PageTitlePropsType = {
 
 function App() {
 
+   let[ratingValue, setRatingValue] = useState<RatingValueType>(0);
+   let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false);
+   let [switchOn,setSwitchOn] = useState<boolean>(false);
+
+
     return (
         <div className="App">
-            <OnOFF/>
+            <OnOFF on={switchOn} onChange={setSwitchOn}/>
+            <UnControlledOnOFF onChange={setSwitchOn}/>
             <PageTitle title={"This is APP component"}/>
-            <UnContolledRating />
-            <Rating value={5}/>
-            <SelfContolledAccordion titleValue={"Menu"}/>
-            <Accordion titleValue={"Menu"} collapsed={false}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <UnControlledRating />
+            <UnControlledAccordion titleValue={"Menu"}/>
+            <Accordion titleValue={"Menu"}
+                       collapsed={accordionCollapsed}
+                       onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>
         </div>
     );
 }
