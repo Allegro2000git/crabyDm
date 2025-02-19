@@ -1,10 +1,10 @@
 
 import './App.css';
-import {Rating, RatingValueType} from './components/rating/Rating';
-import {OnOFF} from "./components/onOFF/OnOFF";
-import {UnControlledAccordion} from "./components/accordion/SelfControlledAccordion";
+import Rating, {RatingValueType} from './components/rating/Rating';
+import OnOFF from "./components/onOFF/OnOFF";
+import UnControlledAccordion from "./components/accordion/SelfControlledAccordion";
 import {UnControlledRating} from "./components/rating/SelfControlledRating";
-import {Accordion} from "./components/accordion/Accordion";
+import Accordion from "./components/accordion/Accordion";
 import {useState} from "react";
 import {UnControlledOnOFF} from "./components/onOFF/UnControlledOnOFF";
 
@@ -28,8 +28,8 @@ function App() {
             <UnControlledRating />
             <UnControlledAccordion titleValue={"Menu"}/>
             <Accordion titleValue={"Menu"}
-                       collapsed={accordionCollapsed}
-                       onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>
+                              collapsed={accordionCollapsed}
+                              onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>
         </div>
     );
 }
