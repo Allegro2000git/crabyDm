@@ -1,12 +1,11 @@
-
 import './App.css';
 import Rating, {RatingValueType} from './components/rating/Rating';
 import OnOFF from "./components/onOFF/OnOFF";
 import UnControlledAccordion from "./components/accordion/SelfControlledAccordion";
-import {UnControlledRating} from "./components/rating/SelfControlledRating";
+import UnControlledRating from "./components/rating/SelfControlledRating";
 import Accordion from "./components/accordion/Accordion";
 import {useState} from "react";
-import {UnControlledOnOFF} from "./components/onOFF/UnControlledOnOFF";
+import UnControlledOnOFF from "./components/onOFF/UnControlledOnOFF";
 
 type PageTitlePropsType = {
     title: string;
