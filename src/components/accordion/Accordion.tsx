@@ -21,7 +21,7 @@ type AccordionBodyPropsType = {
     onClick: (value: any) => void;
 }
 
-function Accordion(props: AccordionPropsType) {
+function  Accordion(props: AccordionPropsType) {
     return (
         <div>
             <AccordionTitle title={props.titleValue} onChange={props.onChange}/>
