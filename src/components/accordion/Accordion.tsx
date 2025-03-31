@@ -1,3 +1,5 @@
+import {memo} from "react";
+
 type ItemType = {
     title: string;
     value: any;
@@ -25,14 +27,16 @@ function  Accordion(props: AccordionPropsType) {
     return (
         <div>
             <AccordionTitle title={props.titleValue} onChange={props.onChange}/>
-            {!props.collapsed && <AccordionBody onClick={props.onClick} items={props.items}/>}
+            {!props.collapsed && <AccordionBodyValues onClick={props.onClick} items={props.items}/>}
         </div>
     )
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
-    return <h3 onClick={(e)=>props.onChange()}>{props.title}</h3>
+    return <h3 onClick={()=>props.onChange()}>{props.title}</h3>
 }
+
+const AccordionBodyValues= memo(AccordionBody);
 
 function AccordionBody(props: AccordionBodyPropsType) {
     return <ul>

@@ -24,11 +24,11 @@ function App() {
             <UnControlledOnOFF onChange={setSwitchOn}/>
             <PageTitle title={"This is APP component"}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <UnControlledRating />
+            <UnControlledRating onChange={setRatingValue}/>
             <UnControlledAccordion titleValue={"Menu"}/>
-            <Accordion titleValue={"Menu"}
-                              collapsed={accordionCollapsed}
-                              onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>
+ {/*        <Accordion titleValue={"Menu"}
+                       collapsed={accordionCollapsed}
+                       onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>*/}
         </div>
     );
 }
