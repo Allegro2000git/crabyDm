@@ -6,7 +6,7 @@ import UnControlledRating from "./components/rating/SelfControlledRating";
 import Accordion from "./components/accordion/Accordion";
 import {useState} from "react";
 import UnControlledOnOFF from "./components/onOFF/UnControlledOnOFF";
-import Clock from "./components/clock/Clock";
+import {Clock} from "./components/clock/Clock";
 
 type PageTitlePropsType = {
     title: string;
